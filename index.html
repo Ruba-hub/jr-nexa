@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -268,10 +269,12 @@
       </section>
 
       <!-- ABOUT -->
-      <section class="about" id="about">
+      <section class="about" id="about" data-aos="fade-up">
         <div class="wrap about-inner">
-          <h2>Technology that works for your business.</h2>
-          <div class="about-text">
+          <h2 data-aos="fade-right">
+            Technology that works for your business.
+          </h2>
+          <div class="about-text" data-aos="fade-left">
             <p>
               JR Nexa is an automation service provider established in 2025,
               helping businesses and organizations use technology to reduce
@@ -291,15 +294,21 @@
       <section class="services" id="services">
         <div class="wrap">
           <div class="section-head">
-            <h2>What we build</h2>
-            <p class="desc">
+            <h2 data-aos="fade-up">What we build</h2>
+            <p class="desc" data-aos="fade-up">
               Six areas where automation, AI, and software design come together
               to remove friction from day-to-day operations.
             </p>
           </div>
 
           <div class="service-grid">
-            <article class="service-card">
+            <article
+              class="service-card"
+              data-number="01"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="0"
+            >
               <span class="num">01</span>
               <svg class="icon" viewBox="0 0 34 34" fill="none">
                 <rect
@@ -337,7 +346,13 @@
               </p>
             </article>
 
-            <article class="service-card">
+            <article
+              class="service-card"
+              data-number="02"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="100"
+            >
               <span class="num">02</span>
               <svg class="icon" viewBox="0 0 34 34" fill="none">
                 <circle
@@ -366,7 +381,13 @@
               </p>
             </article>
 
-            <article class="service-card">
+            <article
+              class="service-card"
+              data-number="03"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="200"
+            >
               <span class="num">03</span>
               <svg class="icon" viewBox="0 0 34 34" fill="none">
                 <rect
@@ -396,7 +417,13 @@
               </p>
             </article>
 
-            <article class="service-card">
+            <article
+              class="service-card"
+              data-number="04"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="300"
+            >
               <span class="num">04</span>
               <svg class="icon" viewBox="0 0 34 34" fill="none">
                 <rect
@@ -426,7 +453,13 @@
               </p>
             </article>
 
-            <article class="service-card">
+            <article
+              class="service-card"
+              data-number="05"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="400"
+            >
               <span class="num">05</span>
               <svg class="icon" viewBox="0 0 34 34" fill="none">
                 <circle
@@ -460,7 +493,13 @@
               </p>
             </article>
 
-            <article class="service-card">
+            <article
+              class="service-card"
+              data-number="06"
+              data-aos="fade-up"
+              data-aos-duration="700"
+              data-aos-delay="500"
+            >
               <span class="num">06</span>
               <svg class="icon" viewBox="0 0 34 34" fill="none">
                 <path
@@ -484,11 +523,13 @@
       </section>
 
       <!-- FEATURED SOLUTION -->
-      <section id="solutions" style="padding: 0 0 96px">
+      <section id="solutions" style="padding: 0 0 96px" data-aos="fade-up">
         <div class="solution">
           <div class="solution-wrap solution-inner">
             <div>
-              <span class="tag">One of our solutions</span>
+              <span class="tag" data-aos="fade-right" data-aos="fade-right"
+                >One of our solutions</span
+              >
               <h2>QuoteBridge</h2>
               <p class="desc">
                 QuoteBridge is a business communication and email campaign
@@ -891,7 +932,7 @@
         </div>
         <div class="footer-bottom">
           <span>© 2025–2026 JR Nexa. All rights reserved.</span>
-          <span>[insert your business email]</span>
+          <span>nexflowtechnologies16@gmail.com</span>
         </div>
       </div>
     </footer>
@@ -920,6 +961,14 @@
         }
         note.classList.add("show");
         form.reset();
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false,
+        offset: 50,
       });
     </script>
   </body>
