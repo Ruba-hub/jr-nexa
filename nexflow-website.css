@@ -44,6 +44,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.skip-link {
+  position: fixed;
+  z-index: 200;
+  top: 12px;
+  left: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 h1,
 h2,
 h3,
@@ -74,6 +90,100 @@ img {
 @media (max-width: 640px) {
   .wrap {
     padding: 0 20px;
+  }
+}
+
+/* ---------- Legal pages ---------- */
+.legal-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 88% 0%,
+      rgba(220, 216, 246, 0.7),
+      transparent 34%
+    ),
+    var(--cream);
+}
+.legal-header {
+  background: var(--dark);
+  color: var(--paper);
+}
+.legal-header .nav-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.legal-header .logo {
+  color: var(--paper);
+}
+.legal-back {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  text-decoration: none;
+}
+.legal-back:hover {
+  color: #ffffff;
+}
+.legal-content {
+  padding-top: 88px;
+  padding-bottom: 100px;
+}
+.legal-content h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.05;
+  max-width: 12ch;
+}
+.legal-intro {
+  margin-top: 18px;
+  max-width: 62ch;
+  color: var(--ink-soft);
+  font-size: 17px;
+}
+.legal-review {
+  margin-top: 28px;
+  max-width: 72ch;
+  padding: 16px 18px;
+  border-left: 4px solid #8d20c3;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.legal-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 56px;
+  max-width: 900px;
+}
+.legal-section {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+}
+.legal-section h2 {
+  font-size: 21px;
+}
+.legal-section p,
+.legal-section li {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.legal-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+@media (max-width: 680px) {
+  .legal-header .nav-inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .legal-content {
+    padding-top: 64px;
+  }
+  .legal-sections {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
   }
 }
 
@@ -626,7 +736,11 @@ section {
 }
 #haifa-water-system .solution {
   background:
-    radial-gradient(circle at 88% 8%, rgba(101, 193, 175, 0.2), transparent 32%),
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(101, 193, 175, 0.2),
+      transparent 32%
+    ),
     linear-gradient(135deg, #102a29 0%, #174942 54%, #10201f 100%);
   border-color: rgba(173, 235, 216, 0.14);
 }
@@ -676,6 +790,13 @@ section {
   max-width: 50ch;
   line-height: 1.6;
 }
+.solution-note {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13.5px;
+  line-height: 1.55;
+  max-width: 54ch;
+}
 .solution-features {
   list-style: none;
   margin: 26px 0 0;
@@ -720,7 +841,9 @@ section {
   gap: 14px;
   padding: 12px 0;
   border-bottom: 1px solid rgba(226, 201, 255, 0.14);
-  transition: padding-left 0.25s ease, color 0.25s ease;
+  transition:
+    padding-left 0.25s ease,
+    color 0.25s ease;
 }
 .solution-panel .row:hover {
   padding-left: 6px;
@@ -752,7 +875,11 @@ section {
 /* ---------- How we work ---------- */
 .how {
   background:
-    radial-gradient(circle at 12% 10%, rgba(218, 211, 255, 0.3), transparent 30%),
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(218, 211, 255, 0.3),
+      transparent 30%
+    ),
     linear-gradient(135deg, #f7f6f2 0%, #f1effb 52%, #f7f6f2 100%);
 }
 .how-grid {
@@ -812,7 +939,11 @@ section {
 /* ---------- Why JR Nexa ---------- */
 .why {
   background:
-    radial-gradient(circle at 88% 80%, rgba(205, 231, 237, 0.34), transparent 30%),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(205, 231, 237, 0.34),
+      transparent 30%
+    ),
     linear-gradient(135deg, #f3f0fb 0%, #f8f7f2 58%, #f0f7f8 100%);
 }
 .why-grid {
@@ -857,7 +988,11 @@ section {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 90% 0%, rgba(226, 201, 255, 0.3), transparent 30%),
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(226, 201, 255, 0.3),
+      transparent 30%
+    ),
     linear-gradient(135deg, #3d155d 0%, #5c2182 52%, #241238 100%);
   border-radius: 18px;
   margin: 0 32px;
@@ -888,6 +1023,18 @@ section {
   max-width: 13ch;
   color: #ffffff;
 }
+.responsible-tag {
+  margin-bottom: 16px;
+  color: #241238;
+  background: #e2c9ff;
+}
+.responsible-intro {
+  margin-top: 18px;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.6;
+}
 .responsible-list {
   list-style: none;
   margin: 0;
@@ -906,6 +1053,7 @@ section {
   padding-left: 20px;
   position: relative;
   color: rgba(255, 255, 255, 0.84);
+  line-height: 1.5;
 }
 .responsible-list li::before {
   content: "";
@@ -1015,6 +1163,10 @@ form.inquiry {
   color: #e2c9ff;
   font-weight: 600;
 }
+.contact-email a {
+  color: #e2c9ff;
+  font-weight: 600;
+}
 .form-note {
   margin-top: 14px;
   font-size: 13.5px;
@@ -1110,4 +1262,33 @@ footer {
   color: rgba(255, 255, 255, 0.45);
   flex-wrap: wrap;
   gap: 10px;
+}
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .hero-copy .sub {
+    font-size: 17px;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .solution-features {
+    grid-template-columns: 1fr;
+  }
+  .responsible-list {
+    gap: 16px;
+  }
+  .responsible-list li {
+    font-size: 14px;
+  }
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

@@ -9,6 +9,16 @@
       name="description"
       content="JR Nexa is an automation service provider established in 2025, helping businesses simplify operations through workflow automation, AI, software development, and digital solutions."
     />
+    <meta name="theme-color" content="#8d20c3" />
+    <meta
+      property="og:title"
+      content="JR Nexa | Automation, AI & Digital Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Practical automation, AI, software, and integration solutions for businesses and organizations."
+    />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,6 +39,7 @@
     <link rel="stylesheet" href="nexflow-website.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-nav">
       <div class="nav-inner">
         <a href="#home" class="logo" aria-label="JR Nexa home">
@@ -81,7 +92,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- HERO -->
       <section class="hero" id="home">
         <div class="wrap hero-inner">
@@ -533,18 +544,24 @@
               <h2>QuoteBridge</h2>
               <p class="desc">
                 QuoteBridge is a business communication and email campaign
-                management application developed by JR Nexa. It helps
-                organizations manage contacts, create professional email
-                campaigns, and communicate with their audiences through a
-                structured platform.
+                management application developed by JR Nexa. It helps businesses
+                and organizations manage contacts, create email campaigns, and
+                organize day-to-day communications through a structured
+                platform.
+              </p>
+              <p class="solution-note">
+                Intended for teams that need a central place for contact
+                management, campaign planning, templates, and business
+                communications. Product availability and specific capabilities
+                should be confirmed with JR Nexa.
               </p>
               <ul class="solution-features">
                 <li>Contact management</li>
-                <li>Email campaigns</li>
+                <li>Campaign creation and management</li>
                 <li>Email templates</li>
                 <li>Business communications</li>
-                <li>Attachments</li>
-                <li>Campaign management</li>
+                <li>Attachments and message content</li>
+                <li>Organized campaign workflows</li>
               </ul>
               <div class="solution-actions">
                 <a
@@ -732,18 +749,45 @@
         </div>
       </section>
 
-      <!-- RESPONSIBLE TECHNOLOGY -->
+      <!-- RESPONSIBLE COMMUNICATION -->
       <section style="padding-bottom: 96px">
         <div class="responsible">
           <div class="responsible-wrap">
-            <h2>Responsible technology</h2>
+            <div>
+              <span class="tag responsible-tag">Responsible communication</span>
+              <h2>Email should be useful, expected, and respectful.</h2>
+              <p class="responsible-intro">
+                JR Nexa recognizes that business communication tools should be
+                used carefully. The practices below describe the standard we aim
+                to support; individual product controls and availability must be
+                verified before use.
+              </p>
+            </div>
             <ul class="responsible-list">
-              <li>Responsible use of automation</li>
-              <li>Protection of business information</li>
-              <li>Respect for customer data</li>
-              <li>Appropriate use of AI</li>
-              <li>Secure system design</li>
-              <li>Responsible communication practices</li>
+              <li>
+                Use permission-based contact lists and communicate with people
+                who expect relevant messages.
+              </li>
+              <li>
+                Provide a clear way to unsubscribe and respect unsubscribe
+                requests promptly.
+              </li>
+              <li>
+                Handle bounced addresses so repeated delivery attempts do not
+                continue unnecessarily.
+              </li>
+              <li>
+                Review complaints and remove or suppress contacts when
+                communication is not wanted.
+              </li>
+              <li>
+                Protect contact information and limit access to people and
+                systems that need it.
+              </li>
+              <li>
+                Do not use automation for deceptive, abusive, unlawful, or
+                unsolicited communication.
+              </li>
             </ul>
           </div>
         </div>
@@ -761,7 +805,13 @@
           </div>
 
           <div class="contact-inner">
-            <form class="inquiry" id="inquiryForm" novalidate>
+            <form
+              class="inquiry"
+              id="inquiryForm"
+              action="mailto:nexflowtechnologies16@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
               <div class="field">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required />
@@ -784,12 +834,16 @@
                 </button>
               </div>
               <p class="form-note" id="formNote">
-                Thanks — your message is ready to send once this form is
-                connected to an inbox.
+                Your email app should open with the inquiry addressed to JR
+                Nexa. This static form does not store or submit data to a web
+                server; a backend integration is required for direct web
+                submissions.
               </p>
               <p class="contact-email">
                 Or reach us directly at
-                <strong>[insert your business email]</strong>
+                <a href="mailto:nexflowtechnologies16@gmail.com"
+                  >nexflowtechnologies16@gmail.com</a
+                >
               </p>
             </form>
 
@@ -924,15 +978,17 @@
             <div class="footer-col">
               <h4>Legal</h4>
               <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
           <span>© 2025–2026 JR Nexa. All rights reserved.</span>
-          <span>nexflowtechnologies16@gmail.com</span>
+          <a href="mailto:nexflowtechnologies16@gmail.com"
+            >nexflowtechnologies16@gmail.com</a
+          >
         </div>
       </div>
     </footer>
@@ -954,13 +1010,12 @@
       const form = document.getElementById("inquiryForm");
       const note = document.getElementById("formNote");
       form.addEventListener("submit", (e) => {
-        e.preventDefault();
         if (!form.checkValidity()) {
+          e.preventDefault();
           form.reportValidity();
           return;
         }
         note.classList.add("show");
-        form.reset();
       });
     </script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
